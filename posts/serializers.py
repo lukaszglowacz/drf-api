@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Profile
+from .models import Post
 
-class ProfileSerializer(serializers.ModelSerializer):
+class PostSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
@@ -12,11 +12,11 @@ class ProfileSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 'Image size larger than 2MB'
             )
-        if value.width > 4096:
+        if value.image.width > 4096:
             raise serializers.ValidationError(
                 'Image width larger than 4096px'
             )
-        if value.height > 4096:
+        if value.image.height > 4096:
             raise serializers.ValidationError(
                 'Image height is latger than 4096px'
             )
@@ -28,7 +28,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         return request.user == obj.owner
 
     class Meta:
-        model = Profile
+        model = Post
         fields = [
-            'id', 'owner', 'is_owner', 'created_at', 'updated_at', 'name', 'content', 'image', 'image_filter'
+            'id', 'owner', 'is_owner', 'profile_id', 'profile_image','created_at', 'updated_at', 'title', 'content', 'image', 'image_filter'
         ]
