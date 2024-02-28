@@ -64,7 +64,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
    os.environ.get('ALLOWED_HOST'),
-   'localhost',
+   'localhost', '127.0.0.1'
 ]
 
 
@@ -114,7 +114,6 @@ if 'CLIENT_ORIGIN' in os.environ:
 else:
     CORS_ALLOWED_ORIGIN_REGEXES = [
         r"^https://.*\.gitpod\.io$",
-        r"^http://localhost:3000$",
     ]
 
 CORS_ALLOW_CREDENTIALS = True
