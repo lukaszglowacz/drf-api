@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import re
 
 if os.path.exists('env.py'):
     import env
@@ -37,7 +36,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS':
         'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
-    'DATETIME_FORMAT': '%d %b %Y %H:%M',
+    'DATETIME_FORMAT': '%d %b %Y',
 }
 if 'DEV' not in os.environ:
     REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
@@ -108,16 +107,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-""" if 'CLIENT_ORIGIN' in os.environ:
-    CORS_ALLOWED_ORIGINS = [
-        os.environ.get('CLIENT_ORIGIN')
-    ]
-if 'CLIENT_ORIGIN_DEV' in os.environ:
-    extracted_url = re.match(r'^([^.]+)', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE).group(0)
-
-    CORS_ALLOWED_ORIGIN_REGEXES = [
-        rf"{extracted_url}.(eu|us)\d+\.codeanyapp\.com$",
-    ] """
 
 CORS_ALLOWED_ORIGINS = [ 'https://project-5-ci-db59797f355e.herokuapp.com', 'http://localhost:3000', 'http://192.168.0.69:3000' ]
 
