@@ -108,7 +108,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-if 'CLIENT_ORIGIN' in os.environ:
+""" if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN')
     ]
@@ -117,7 +117,9 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
     CORS_ALLOWED_ORIGIN_REGEXES = [
         rf"{extracted_url}.(eu|us)\d+\.codeanyapp\.com$",
-    ]
+    ] """
+
+CORS_ALLOWED_ORIGINS = [ 'https://project-5-ci-db59797f355e.herokuapp.com', 'http://localhost:3000', 'http://192.168.0.69:3000' ]
 
 CORS_ALLOW_CREDENTIALS = True
 
