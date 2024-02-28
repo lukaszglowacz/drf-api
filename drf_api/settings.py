@@ -108,7 +108,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [ 'https://project-5-ci-db59797f355e.herokuapp.com', 'http://localhost:3000', 'http://192.168.0.69:3000' ]
+CORS_ALLOWED_ORIGINS = [ 'https://react-5th-project-ci-35c83aca9818.herokuapp.com', 'http://localhost:3000', 'http://192.168.0.69:3000' ]
 
 CORS_ALLOW_CREDENTIALS = True
 
