@@ -112,6 +112,14 @@ CORS_ALLOWED_ORIGINS = [ 'https://react-5th-project-ci-35c83aca9818.herokuapp.co
 
 CORS_ALLOW_CREDENTIALS = True
 
+CORS_ALLOWED_HEADERS = [
+    'Accept',
+    'Accept-Language',
+    'Content-Type',
+    'Authorization',
+    'X-Bypass-Authorization',
+]
+
 ROOT_URLCONF = 'drf_api.urls'
 
 TEMPLATES = [
