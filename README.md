@@ -1,39 +1,46 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# DRF API Project
 
-Welcome,
+The **DRF API** is a versatile and user-friendly backend application built with Django REST Framework. It provides a comprehensive set of functionalities to manage user data, posts, followers, comments, and likes. The API is designed to empower users with Create, Read, Update, and Delete (CRUD) capabilities, allowing them to seamlessly interact with the platform's features.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Key Features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+### 1. User Profiles
 
-## Codeanywhere Reminders
+The API facilitates the creation and management of user profiles, allowing users to personalize their accounts with details such as profile pictures, biographies, and contact information.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+### 2. Post Management
 
-`python3 -m http.server`
+Users can effortlessly create, view, edit, and delete posts. The API ensures a smooth experience for users to share their moments, thoughts, and multimedia content.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### 3. Followers System
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+A robust followers system is integrated, enabling users to follow and be followed by others. This feature enhances the social connectivity of the platform, fostering a sense of community.
 
-`http_server`
+### 4. Comments
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Users can engage in discussions by leaving comments on posts. The API ensures seamless interaction, allowing users to express their thoughts and opinions.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### 5. Like Functionality
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Expressing appreciation for posts is made easy with the like functionality. Users can like posts, contributing to a positive and engaging environment.
 
-To log into the Heroku toolbelt CLI:
+## Credentials
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+This project is built on the foundation of the **DRF_API** project from Code Institute. The original project served as a starting point, and additional features and customizations have been implemented to tailor it to the specific requirements of this project.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## How to Use
 
----
+### Installation
 
-Happy coding!
+1. Clone the repository: `git clone https://github.com/lukaszglowacz/drf-api`
+2. Navigate to the project directory: `cd drf-api`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Apply migrations: `python manage.py migrate`
+5. Create a superuser: `python manage.py createsuperuser`
+
+### Run the Server
+
+```bash
+# Run the development server
+python manage.py runserver
+
